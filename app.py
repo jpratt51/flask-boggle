@@ -10,7 +10,7 @@ boggle_game = Boggle()
 @app.route('/')
 def home_page():
     """Direct user to home page"""
-    return render_template('start-game.html')
+    return render_template('index.html')
 
 @app.route('/game-board', methods=['POST','GET'])
 def game_board():

@@ -1,0 +1,89 @@
+body {
+  background-color: #677feb;
+}
+
+#scores {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+#board td {
+    width: 60px;
+    height: 60px;
+    font-family: 'Bebas Neue', cursive;
+    border: solid 1px #666;
+    border-radius: 5px;
+    background-color: #F2F3F5;
+    text-align:center;
+    font-size: 3rem;
+  }
+
+#board {
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px #666;
+  border-radius: 5px;
+  padding: .3rem;
+  background-color: white;
+}
+
+#message {
+  display: inline-block;
+  text-align: center;
+  margin: .2rem;
+}
+
+#start, #rules {
+  display: flex;
+  justify-content: center;
+}
+
+#rules-text {
+  text-align: left;
+  font-size: 1.2rem;
+  font-family: 'Bebas Neue', cursive;
+}
+
+/* form {
+  display: inline-block;
+  text-align: center;
+} */
+
+h2 {
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+}
+
+h1, .text-element {
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+}
+
+button {
+  font-size: 1.3rem;
+  font-family: 'Bebas Neue', cursive;
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-family: 'Bungee Spice', cursive;
+}
+
+.invalid {
+  font-size: 20px;
+  border: solid 1px;
+  border-radius: 5px;
+  background-color: rgba(255,0,0,.7);
+  padding: .5rem;
+}
+
+.valid {
+  font-size: 20px;
+  border: solid 1px;
+  border-radius: 5px;
+  background-color: rgba(0,255,0,.7);
+  padding: .5rem;
+}
+
+

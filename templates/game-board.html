@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Flask Boggle{% endblock %}
+{% block content %}
+<h1>Flask Boggle</h1>
+<div id="timer" class="text-element"></div>
+<div id="message-container" class="text-element">
+  <div id="message"><br></div>
+</div>
+<div id="game">
+  <table id="board">
+    <tbody>
+      {% for row in board %}
+      <tr>
+        {% for cell in row %}
+        <td>{{ cell }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<p>
+    <form id="word-form" method="POST" class="text-element">
+        <label for="guess">
+            Guess Word: <input type="text" name="guess" id="guess-word">
+        </label>
+        <button>Submit</button>
+    </form>
+</p>
+<div class="text-element">
+  <div id="scores" class="text-element">Score: {{score}}  High Score: {{highScore}}  Games Played: {{gameCount}}</div>  <button id="new-game">New Game</button> <button id="reset-count">Reset Counts</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/static/setup.js"></script>
+<script src="/static/messages.js"></script>
+<script src="/static/handle.js"></script>
+<script src="/static/scores.js"></script>
+{% endblock %}

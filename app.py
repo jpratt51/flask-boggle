@@ -1,21 +1,11 @@
 from flask import Flask, render_template, session, request, jsonify
 from boggle import Boggle
-from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = "secret"
-app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
-debug = DebugToolbarExtension(app)
 
 boggle_game = Boggle()
-
-def reverse_str(s):
-    return s[::-1]
-
-def is_palindrome(s):
-    rev = reverse_str(s)
-    return s.lower() == rev.lower()
 
 @app.route('/')
 def home_page():
